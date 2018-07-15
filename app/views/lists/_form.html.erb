@@ -6,5 +6,10 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
+    <%= Game.all.each do |game| %>
+        <%= f.check_box(:games, { :multiple => true}, game.title) %>
+    <% end %>
+
   <%= f.submit %>
+
 <% end %>

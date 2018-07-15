@@ -6,9 +6,6 @@
 
 <ul>
   <li><%= @user.first_name %>'s Gamer Profile</li>
-  <% if @user.lists.present? %>
-    <li>Created Lists: <%= link_to @list.user.name, @list.user %></li>
-  <% end %>
   <li>Country: <%= @user.country %></li>
   <li>Bio: <%= @user.bio %></li>
   <li>Avatar: <%= @user.image %></li>

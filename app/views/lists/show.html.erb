@@ -6,7 +6,9 @@
 </ul>
 
 <% @list.games.each do |game| %>
-  <%= link_to image_tag(game.image, :class => 'thumb'), game %>
+  <ul>
+    <li><%= link_to image_tag(game.image, :class => 'thumb'), game %></li>
+  </ul>
 <% end %>
 
 <div class="controls">
