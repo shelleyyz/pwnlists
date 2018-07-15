@@ -14,7 +14,8 @@
     <nav>
       <%= link_to 'Home', root_path %>
       <% if @current_user.present? %>
-        <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
+        <%= link_to "Sign out #{ @current_user.first_name }", login_path, :method => 'delete' %>
+        <%= link_to "Edit Profile", @current_user %>
         <%= link_to "Create List", new_list_path %>
         <%= link_to "Public Lists", lists_path %>
       <% else %>
