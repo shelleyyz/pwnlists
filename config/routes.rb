@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'lists/new'
+  get 'lists/index'
+  get 'users/new'
+  get 'users/index'
+  get 'user/new'
+  get 'user/index'
   root :to => 'pages#home'
   resources :users
   resources :lists
