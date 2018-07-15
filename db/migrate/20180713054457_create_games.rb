@@ -6,6 +6,7 @@ class CreateGames < ActiveRecord::Migration[5.2]
       t.text :developer
       t.text :image
       t.integer :list_id
+      t.integer :game_id
 
       t.timestamps
     end

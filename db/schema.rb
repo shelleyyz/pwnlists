@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_07_14_231004) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "favourites_lists", force: :cascade do |t|
+  create_table "favourites_lists", id: false, force: :cascade do |t|
     t.integer "list_id"
     t.integer "user_id"
   end
@@ -33,13 +33,14 @@ ActiveRecord::Schema.define(version: 2018_07_14_231004) do
     t.text "developer"
     t.text "image"
     t.integer "list_id"
+    t.integer "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "games_lists", id: false, force: :cascade do |t|
-    t.integer "game_id"
     t.integer "list_id"
+    t.integer "game_id"
   end
 
   create_table "lists", force: :cascade do |t|
@@ -52,8 +53,10 @@ ActiveRecord::Schema.define(version: 2018_07_14_231004) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.text "email"
     t.text "first_name"
     t.text "last_name"
+    t.text "password_digest"
     t.text "country"
     t.text "image"
     t.text "bio"

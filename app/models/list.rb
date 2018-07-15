@@ -15,7 +15,7 @@ class List < ApplicationRecord
   belongs_to :user, :optional => true
   has_and_belongs_to_many :games
 
-  #favourited by users
-  has_many :favourite_lists #the association
-  has_many :favourited_by, :through => :favourite_lists #the user favouritng a list
+  # #favourited by users
+  # has_many :favourite_lists #the association
+  # has_many :favourited_by, :through => :favourite_lists #the user favouritng a list
 end

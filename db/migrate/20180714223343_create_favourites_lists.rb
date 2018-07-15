@@ -1,6 +1,6 @@
 class CreateFavouritesLists < ActiveRecord::Migration[5.2] #join model connecting user with favourite list
   def change
-    create_table :favourites_lists do |t|
+    create_table :favourites_lists, :id => false do |t|
       t.integer :list_id
       t.integer :user_id
     end
