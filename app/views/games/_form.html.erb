@@ -1,0 +1,21 @@
+<%= form_for @game do |f| %>
+
+  <%= f.label :title, :autofocus => true%>
+  <%= f.text_field :title %>
+
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+
+  <%= f.label :developer %>
+  <%= f.text_field :developer %>
+
+  <%= f.label :image %>
+  <%= f.url_field :image %>
+
+  <%# create ability for user to assign game to a list %>
+  <%# f.label "Lists" %>
+  <%# f.collection_check_boxes :list_ids, List.all, :id, :name #%>
+
+  <%= f.submit %>
+
+<% end %>

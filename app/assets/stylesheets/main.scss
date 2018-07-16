@@ -10,3 +10,28 @@ body {
 a {
   padding: 20px;
 }
+
+.addgame {
+  display: inline-block;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.thumb {
+  max-height: 8em;
+}
+
+.feature {
+  max-width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.gameslist {
+  display: inline-block;
+}

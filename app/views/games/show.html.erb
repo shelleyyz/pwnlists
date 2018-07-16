@@ -1,0 +1,18 @@
+<h1><%= @game.title %></h1>
+
+<% if @game.image.present? %>
+<%= image_tag @game.image, :alt => @game.title, :class => 'feature' %>
+<% end %>
+
+  <ul>
+    <li>Name: <%= @game.title %></li>
+    <li>Genre: <%= @game.genre %></li>
+    <li>Developer: <%= @game.developer %></li>
+  </ul>
+
+<%#to do, add section where it shows that list this game belongs to#%>
+
+<div class="controls">
+  <%= link_to "Edit Game", edit_game_path(@game) %>
+  <%= link_to "Delete Game", game_path(@game), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

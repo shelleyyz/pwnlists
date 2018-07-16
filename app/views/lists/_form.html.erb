@@ -6,10 +6,10 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
-    <%= Game.all.each do |game| %>
-        <%= f.check_box(:games, { :multiple => true}, game.title) %>
-    <% end %>
+<%# create ability for user to add game to list , add ids to joining table %>
 
-  <%= f.submit %>
+  <%= f.label "Games" %>
+  <%= f.collection_check_boxes :game_ids, Game.all, :id, :title %>
+<%= f.submit %>
 
 <% end %>

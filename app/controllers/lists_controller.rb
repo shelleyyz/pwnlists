@@ -25,7 +25,7 @@ class ListsController < ApplicationController
   def update
     list = List.find params[:id]
     list.update list_params
-    redirect_to root_path
+    redirect_to list_path
   end
 
   def destroy
@@ -36,6 +36,6 @@ class ListsController < ApplicationController
 
   private
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :description, :game_ids => [])
   end
 end

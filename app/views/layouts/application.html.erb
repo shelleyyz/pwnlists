@@ -16,7 +16,9 @@
       <% if @current_user.present? %>
         <%= link_to "Edit Profile", @current_user %>
         <%= link_to "Create List", new_list_path %>
-        <%= link_to "Public Lists", lists_path %>
+        <%= link_to "Add Game", new_game_path %>
+        <%= link_to "All Games", games_path %>
+        <%= link_to "All Lists", lists_path %>
         <%= link_to "Sign out #{ @current_user.first_name }", login_path, :method => 'delete' %>
       <% else %>
         <%= link_to 'Sign up', new_user_path %>

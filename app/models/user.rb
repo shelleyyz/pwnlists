@@ -19,7 +19,8 @@ class User < ApplicationRecord
   validates :email, :presence => true, :uniqueness => true
 
   has_many :lists
-  
+  has_many :games
+
 
   # #favourite lists of the user
   # has_many :favourite_lists #the association
