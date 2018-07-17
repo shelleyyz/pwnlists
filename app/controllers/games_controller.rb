@@ -28,6 +28,7 @@ class GamesController < ApplicationController
   end
 
   def destroy
+    before_action :check_for_admin
     game = Game.find params[:id]
     game.destroy
     redirect_to games_path

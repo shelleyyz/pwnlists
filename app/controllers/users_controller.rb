@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :check_for_admin, :only => [:index]
 
-  
+
   def index
     @users = User.all
   end
@@ -33,6 +33,12 @@ class UsersController < ApplicationController
     user.update user_params
     redirect_to user
   end
+
+  def destroy
+  user = User.find params[:id]
+  user.destroy
+  redirect_to login_path
+end
 
   private
   def user_params

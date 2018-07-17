@@ -7,9 +7,11 @@
   <%= f.text_field :description %>
 
 <%# create ability for user to add game to list , add ids to joining table %>
-
+<div class="form-group form-check">
   <%= f.label "Games" %>
+
   <%= f.collection_check_boxes :game_ids, Game.all, :id, :title %>
+</div>
 <%= f.submit %>
 
 <% end %>

@@ -14,5 +14,7 @@
 
 <div class="controls">
   <%= link_to "Edit Game", edit_game_path(@game) %>
+  <% if @current_user.admin? %>
   <%= link_to "Delete Game", game_path(@game), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+  <% end %>
 </div>
