@@ -18,5 +18,20 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
 
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :bio %>
+  <%= f.text_field :bio %>
+
+  <%= f.label :country %>
+  <%= f.text_field :country %>
+
+  <%= f.label :image %>
+  <%= f.url_field :image %>
+
   <%= f.submit "Sign up!" %>
 <% end %>
