@@ -2,7 +2,9 @@
 
 <ul>
   <li>Name: <%= @list.name %></li>
+  <li>Created By: <%= link_to @name.first_name, user_path(@list.user_id) %></li>
   <p>Description: <%= @list.description %></p>
+
 </ul>
 
 <% @list.games.each do |game| %>

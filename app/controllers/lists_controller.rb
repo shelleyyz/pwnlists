@@ -7,6 +7,8 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find params[:id]
+    @name = User.find @list.user_id
+    # raise "hell"
   end
 
   def new
