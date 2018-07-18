@@ -1,20 +1,36 @@
 <%= form_for @list do |f| %>
 
+<div class="form-group">
+
   <%= f.label :name, :autofocus => true%>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, :class => "form-control" %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-<%# create ability for user to add game to list , add ids to joining table %>
-<div class="form-check">
-<label class="form-check-label" for="defaultCheck1">
-  <%= f.label "Games" %>
-</label>
-<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <%= f.collection_check_boxes :game_ids, Game.all, :id, :title %>
 </div>
 
-<%= f.submit %>
+<div class="form-group">
+
+  <%= f.label :description %>
+  <%= f.text_area :description, :class => "form-control" %>
+
+</div>
+
+<div class="form-check">
+
+  <label class="form-check-label">
+    <%= f.label "Add Games" %>
+  </label>
+</div>
+
+<div class="form-check">
+  <%= f.collection_check_boxes :game_ids, Game.all, :id, :title do |b| %>
+    <label class="form-check-label">
+      <%= b.check_box %>
+      <%= b.label %>
+      </label>
+<% end %>
+</div>
+
+</br>
+<%= f.submit :class => "btn btn-primary" %>
 
 <% end %>

@@ -1,13 +1,21 @@
-<h1><%= @user.first_name %>'s Profile</h1>
+<h1><%= @user.first_name.capitalize %>'s Profile</h1>
 
 <% if @user.image.present? %>
-<%= image_tag @user.image, :alt => @user.first_name, :class => "feature" %>
+<%= image_tag @user.image, :alt => @user.first_name, :class => "img-thumbnail" %>
 <% end %>
 
+<div class="container">
+    <div class="span3 well">
+        <center>
+        <h3><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></li></h3>
+		</center>
+    </div>
+
+
 <ul>
-  <li>Full Name: <%= @user.first_name %> <%= @user.last_name %></li>
-  <li>Where I Live: <%= @user.country %></li>
+  <li>Full Name: <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></li>
   <li>Bio: <%= @user.bio %></li>
+  <li>Where I Live: <%= @user.country.capitalize %></li>
 </ul>
 
 
@@ -37,4 +45,5 @@
 <div class="controls">
   <%= link_to 'Edit Profile', edit_user_path(@user) %>
   <%= link_to 'Delete Profile', user_path(@user), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
 </div>
