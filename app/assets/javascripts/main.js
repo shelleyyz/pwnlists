@@ -9,7 +9,7 @@ $(document).ready( function () {
 
   function* quoteGenerator() {
   	while (true) {
-  		yield fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+  		yield fetch('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
       		.then(res => res.json());
    	}
   }
