@@ -6,13 +6,35 @@ body {
   margin: 0 auto;
 }
 
+.bg-scroll {
+	opacity: 1;
+  position: absolute;
+  /* make BG larger than container */
+  height: 150%;
+  width: 150%;
+  /* center bg in container - ratio of 150% */
+  top: -25%;
+  left: -25%;
+  background: url(http://cdn1.bestpsdfreebies.com/wp-content/uploads/2014/03/blueprint-pattern-5.jpg) repeat;
+  animation: backgroundScroll 16s linear infinite;
+  transform: rotate(45deg) scale(1);
+  transform-origin: center center;
+}
+
+@keyframes backgroundScroll {
+	0% {
+    background-position: 0 0;
+  }
+	100% {
+    /* pattern bg texture is 1000x1000px */
+    background-position:0 -1000px;
+  }
+}
+
 a {
   padding: 20px;
 }
 
-.thumb {
-  max-height: 8em;
-}
 
 .feature {
   max-width: 50%;
