@@ -10,6 +10,24 @@
   <li>Bio: <%= @user.bio %></li>
 </ul>
 
+  <div id="map"></div> <!--need predefined height to display content, otherwise it won't expand-->
+
+  <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {
+            lat: <%= @latitude %>,
+            lng: <%= @longitude %>,
+          },
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRXwg_OQijgCBgFl1XoVh63khQf0Ojz7A&callback=initMap"
+    async defer></script>
+</div>
+
 <button id="get-quote">Get your Swanson on</button>
 <p id="quote">Getting quote...</p>
 

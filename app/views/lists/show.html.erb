@@ -2,7 +2,9 @@
 
 <ul>
   <li>Name: <%= @list.name %></li>
-  <li>Created By: <%= link_to @name.first_name, user_path(@list.user_id) %></li>
+  <% if @name.first_name.present? %>
+   <li>Created By: <%= link_to @name.first_name, user_path(@list.user_id) %></li>
+  <% end %>
   <p>Description: <%= @list.description %></p>
 
 </ul>

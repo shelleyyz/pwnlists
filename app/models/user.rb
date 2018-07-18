@@ -18,11 +18,11 @@ class User < ApplicationRecord
   has_secure_password
   validates :email, :presence => true, :uniqueness => true
 
+  geocoded_by :country
+  after_validation :geocode, if :country_changed?
+
   has_many :lists
   has_many :games
 
-
-  # #favourite lists of the user
-  # has_many :favourite_lists #the association
-  # has_many :favourites, :through => :favourite_lists #list a user favourites
+end
 end
