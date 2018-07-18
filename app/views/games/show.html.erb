@@ -13,8 +13,8 @@
 <%#to do, add section where it shows that list this game belongs to#%>
 
 <div class="controls">
-  <%= link_to "Edit Game", edit_game_path(@game) %>
+  <%= link_to "Edit Game", edit_game_path(@game), :class => "btn btn-primary"  %>
   <% if @current_user.admin? %>
-  <%= link_to "Delete Game", game_path(@game), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+  <%= link_to "Delete Game", game_path(@game), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary"  %>
   <% end %>
 </div>
