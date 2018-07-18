@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all #user seeds
-u1 = User.create :email => 'shelley@ga.co', :password => 'chicken'
-u2 = User.create :email => 'david@ga.co', :password => 'chicken'
-u3 = User.create :email => 'joel@ga.co', :password => 'chicken'
-u4 = User.create :email => 'john@ga.co', :password => 'chicken'
+u1 = User.create :email => 'shelley@ga.co', :password => 'chicken', :country => 'China', :admin => true
+u2 = User.create :email => 'david@ga.co', :password => 'chicken', :country => 'Cambodia'
+u3 = User.create :email => 'joel@ga.co', :password => 'chicken', :country => 'Antarctica'
+u4 = User.create :email => 'john@ga.co', :password => 'chicken', :country => 'Australia'
 
 Game.destroy_all #game seeds
 g1 = Game.create :title => 'Borderlands 2', :genre => 'Action RPG', :developer => '2K games', :image => 'https://downloads.2kgames.com/2k/staging/datastore/1017-borderlands_bg_gamepage_2_FLAT.jpg'
@@ -32,7 +32,7 @@ l3 = List.create :name => 'Test of Time', :public => true, :description => "This
 #lists and games
 l1.games << g1 << g2
 l2.games << g4 << g5
-l3.games << g1 << g5 
+l3.games << g1 << g5
 
 #users and lists
 u1.lists << l1 << l2

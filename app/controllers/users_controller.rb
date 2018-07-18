@@ -44,6 +44,7 @@ class UsersController < ApplicationController
       coordinates = results.first.coordinates
       @latitude = coordinates.first
       @longitude = coordinates.last
+
     end
 
     @user.update user_params

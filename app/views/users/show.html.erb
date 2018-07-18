@@ -6,10 +6,12 @@
 
 <ul>
   <li>Full Name: <%= @user.first_name %> <%= @user.last_name %></li>
-  <li>City: <%= @user.country %></li>
+  <li>Where I Live: <%= @user.country %></li>
   <li>Bio: <%= @user.bio %></li>
 </ul>
 
+
+<% if @user.country.present? %>
   <div id="map"></div> <!--need predefined height to display content, otherwise it won't expand-->
 
   <script>
@@ -26,7 +28,8 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRXwg_OQijgCBgFl1XoVh63khQf0Ojz7A&callback=initMap"
     async defer></script>
-</div>
+
+<% end %>
 
 <button id="get-quote">Get your Swanson on</button>
 <p id="quote">Getting quote...</p>
