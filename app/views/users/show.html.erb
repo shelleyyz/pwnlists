@@ -23,24 +23,27 @@
 <% if @user.country.present? %>
   <div id="map"></div> <!--need predefined height to display content, otherwise it won't expand-->
 
+<% end %>
+
   <script>
-      var map;
+      var myLatLng = {lat: <%= @latitude %>, lng: <%= @longitude %>};
+
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {
-            lat: <%= @latitude %>,
-            lng: <%= @longitude %>,
-          },
-          zoom: 8
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 15
         });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+        })
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRXwg_OQijgCBgFl1XoVh63khQf0Ojz7A&callback=initMap"
     async defer></script>
 
-<% end %>
+<br>
 
-<button id="get-quote">Get your Swanson on</button>
-<p id="quote">Getting quote...</p>
-
-</div>
+  <button id="get-quote">Get your Swanson on</button>
+  <p id="quote">Getting quote...</p>

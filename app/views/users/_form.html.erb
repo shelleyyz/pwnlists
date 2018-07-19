@@ -9,7 +9,7 @@
 <%= form_for(@user, :html => { :multipart => true }) do |f| %>
 <div class="form-group">
   <%= f.label :email %>
-  <%= f.email_field :email, :class => "form-control"%>
+  <%= f.email_field :email, :class => "form-control", :placeholder => "cookie@gmail.com"%>
 </div>
 <div class="form-group">
   <%= f.label :password %>
@@ -21,19 +21,23 @@
 </div>
 <div class="form-group">
   <%= f.label :first_name %>
-  <%= f.text_field :first_name, :class => "form-control" %>
+  <%= f.text_field :first_name, :class => "form-control", :placeholder => "Shelley" %>
 </div>
 <div class="form-group">
   <%= f.label :last_name %>
-  <%= f.text_field :last_name, :class => "form-control" %>
+  <%= f.text_field :last_name, :class => "form-control", :placeholder => "Zhang" %>
 </div>
 <div class="form-group">
-  <%= f.label :bio %>
-  <%= f.text_area :bio, :class => "form-control" %>
+  <%= f.label "What's Your Story?" %>
+  <%= f.text_area :bio, :class => "form-control", :placeholder => "I'm like seriously the best." %>
 </div>
 <div class="form-group">
-  <%= f.label :country %>
+  <%= f.label :Address %>
   <%= f.text_field :country, :class => "form-control" %>
+  <small id="passwordHelpInline" class="text-muted">
+      Example: 1 Thomas Holt Drive, Macquarie Park
+  </small>
+
 </div>
 <div class="form-group">
   <%= f.label :image %>

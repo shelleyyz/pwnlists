@@ -1,10 +1,11 @@
 
 $(document).ready( function () {
-  // console.log("is this on");
+
 
   'use strict';
 
   const quoteButton = document.body.querySelector('#get-quote');
+  console.log(quoteButton);
   const quoteOutput = document.body.querySelector('#quote');
 
   function* quoteGenerator() {
@@ -13,7 +14,6 @@ $(document).ready( function () {
       		.then(res => res.json());
    	}
   }
-
   const generator = quoteGenerator();
 
   function updateQuote() {
@@ -22,13 +22,12 @@ $(document).ready( function () {
   	generator.next().value.then(function (data) {
   		quoteOutput.innerHTML = `"${data[0]}"`;
   		quoteButton.disabled = false;
+
   	});
   }
 
   quoteButton.onclick = updateQuote;
 
   updateQuote();
-
-
-
-})
+}
+);

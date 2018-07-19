@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Pwnlists</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 
   </head>
 
@@ -22,7 +24,7 @@
         <%= link_to "PwnLists", root_path, :class => "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Edit Profile", @current_user, :class => "nav-link" %>
+        <%= link_to "Profile", @current_user, :class => "nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to "Create List", new_list_path, :class => "nav-link"%>
@@ -47,17 +49,16 @@
         <%= link_to 'Sign In', login_path, :class => "nav-link" %>
       </li>
     <% end %>
-
     </ul>
   </nav>
 </div>
 
 <div class="container">
 
-
     <%= yield %>
 
 </div>
+
   <footer class="py-3 bg-primary fixed-bottom">
     <p class="m-0 text-center text-white">Copyright &copy; Shelley Zhang 2018 WDI-28</p>
   </footer>

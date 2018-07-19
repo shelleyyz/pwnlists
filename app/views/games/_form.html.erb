@@ -10,21 +10,24 @@
 <div class="form-group">
 
   <%= f.label :genre %>
-  <%= f.text_field :genre, :class => "form-control" %>
+  <%= f.text_field :genre, :class => "form-control", :placeholder => "Action Adventure" %>
 
 </div>
 
 <div class="form-group">
 
   <%= f.label :developer %>
-  <%= f.text_field :developer, :class => "form-control" %>
+  <%= f.text_field :developer, :class => "form-control", :placeholder => "Ubisoft Montreal" %>
 
 </div>
 
 <div class="form-group">
 
   <%= f.label :image %>
-  <%= f.url_field :image, :class => "form-control" %>
+  <%= f.url_field :image, :class => "form-control", :placeholder => "http://...." %>
+  <small id="passwordHelpInline" class="text-muted">
+      Enter an image URL.
+  </small>
 
 </div>
 

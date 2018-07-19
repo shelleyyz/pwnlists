@@ -1,7 +1,7 @@
 <h1>All Games</h1>
 
 <% @games.each do |game| %>
-  <ul>
-    <li><%= link_to game.title, game %></li>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action"><%= link_to game.title, game %></li>
   </ul>
 <% end %>

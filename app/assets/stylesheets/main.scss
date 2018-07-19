@@ -3,8 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 
-@import "bootstrap";
-
 .container {
   margin-bottom: 200px;
 }
@@ -18,9 +16,15 @@ nav {
 }
 
 .circle-img {
-  width: 200px;
-  height: 200px;
+  max-width: 180px;
+  max-height: 200px;
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto;
+  background-size: contain;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 80px;
 }
