@@ -2,14 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
-body {
-  margin: 0 auto;
+
+@import "bootstrap";
+
+.container {
+  margin-bottom: 200px;
 }
 
-.feature {
-  max-width: 50% !important;
+nav {
+  padding-bottom: 10px !important;
 }
 
 #map {
   height: 50vh;
+}
+
+.circle-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
 }

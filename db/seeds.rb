@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all #user seeds
-u1 = User.create :email => 'shelley@ga.co', :password => 'chicken', :country => 'China', :admin => true
-u2 = User.create :email => 'david@ga.co', :password => 'chicken', :country => 'Cambodia'
-u3 = User.create :email => 'joel@ga.co', :password => 'chicken', :country => 'Antarctica'
-u4 = User.create :email => 'john@ga.co', :password => 'chicken', :country => 'Australia'
+u1 = User.create :email => 'shelley@ga.co', :first_name => 'Shelley', :last_name => 'Zhang', :password => 'chicken', :country => 'China', :admin => true
+u2 = User.create :email => 'david@ga.co', :first_name => 'David', :last_name => 'Kuy', :password => 'chicken', :country => 'Cambodia'
+u3 = User.create :email => 'joel@ga.co', :first_name => 'Joel', :last_name => 'Turnbull', :password => 'chicken', :country => 'Antarctica'
+u4 = User.create :email => 'john@ga.co', :first_name => 'John', :last_name => 'Coote', :password => 'chicken', :country => 'Australia'
 
 Game.destroy_all #game seeds
 g1 = Game.create :title => 'Borderlands 2', :genre => 'Action RPG', :developer => '2K games', :image => 'https://downloads.2kgames.com/2k/staging/datastore/1017-borderlands_bg_gamepage_2_FLAT.jpg'

@@ -18,6 +18,8 @@ class User < ApplicationRecord
   has_secure_password
   validates :email, :presence => true, :uniqueness => true
   validates :country, :presence => true #require user to enter country
+  validates :first_name, :presence => true
+  validates :last_name, :presence => true
   geocoded_by :country
   after_validation :geocode, if :country_changed?
 

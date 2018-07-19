@@ -1,15 +1,24 @@
 <h1><%= @user.first_name %>'s Profile</h1>
 
 <% if @user.image.present? %>
-<%= image_tag @user.image, :alt => @user.first_name, :class => "img-thumbnail" %>
+<div class="circle-img">
+  <%= image_tag @user.image, :alt => @user.first_name %>
+</div>
 <% end %>
 
-<ul>
-  <li>Full Name: <%= @user.first_name %> <%= @user.last_name%></li>
-  <li>Bio: <%= @user.bio %></li>
-  <li>Where I Live: <%= @user.country %></li>
-</ul>
+<div>
+  <%= link_to 'Edit Profile', edit_user_path(@user), :class => "btn btn-primary" %>
+  <% if @current_user.admin? %>
+  <%= link_to 'Delete Profile', user_path(@user), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary" %>
+  <% end %>
+</div>
 
+
+  <p>Name: <%= @user.first_name %> <%= @user.last_name%></p>
+  <% if @user.bio.present? %>
+  <p>Bio: <%= @user.bio %></p>
+  <% end %>
+  <p>Where I Live: <%= @user.country %></p>
 
 <% if @user.country.present? %>
   <div id="map"></div> <!--need predefined height to display content, otherwise it won't expand-->
@@ -34,8 +43,4 @@
 <button id="get-quote">Get your Swanson on</button>
 <p id="quote">Getting quote...</p>
 
-<div class="controls">
-  <%= link_to 'Edit Profile', edit_user_path(@user), :class => "btn btn-primary" %>
-  <%= link_to 'Delete Profile', user_path(@user), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary" %>
-</div>
 </div>

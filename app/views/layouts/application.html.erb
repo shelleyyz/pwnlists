@@ -9,48 +9,57 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-      <% if @current_user.present? %>
-        <li class="nav-item active brand">
-          <%= link_to "PwnLists", root_path, :class => "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Edit Profile", @current_user, :class => "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Create List", new_list_path, :class => "nav-link"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Add Game", new_game_path, :class => "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "All Games", games_path, :class => "nav-link"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "All Lists", lists_path, :class => "nav-link"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sign Out #{ @current_user.first_name.capitalize }", login_path, :method => 'delete', :class => "nav-link"%>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to 'Sign Up', new_user_path, :class => "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Sign In', login_path, :class => "nav-link" %>
-        </li>
-      <% end %>
 
-      </ul>
-    </div>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    <% if @current_user.present? %>
+      <li class="nav-item active brand">
+        <%= link_to "PwnLists", root_path, :class => "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Edit Profile", @current_user, :class => "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Create List", new_list_path, :class => "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Add Game", new_game_path, :class => "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "All Games", games_path, :class => "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "All Lists", lists_path, :class => "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign Out #{ @current_user.first_name }", login_path, :method => 'delete', :class => "nav-link"%>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to 'Sign Up', new_user_path, :class => "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Sign In', login_path, :class => "nav-link" %>
+      </li>
+    <% end %>
+
+    </ul>
   </nav>
+</div>
+
+<div class="container">
+
+
     <%= yield %>
-  </body>
+
+</div>
+  <footer class="py-3 bg-primary fixed-bottom">
+    <p class="m-0 text-center text-white">Copyright &copy; Shelley Zhang 2018 WDI-28</p>
+  </footer>
+</body>
 </html>

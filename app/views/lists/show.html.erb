@@ -6,15 +6,21 @@
 
   <p>Description: <%= @list.description %></p>
 
-<% @list.games.each do |game| %>
 
-  <%= link_to image_tag(game.image, :class => 'img-thumbnail'), game %>
+  <% @list.games.each do |game| %>
 
+  <div class="container">
+    <div class="row text-center text-lg-left">
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <%= link_to image_tag(game.image, :class => 'img-thumbnail'), game %>
+      </div>
+    </div>
+  </div>
 <% end %>
 
 <div class="controls">
-  <%= link_to "Edit PwnList", edit_list_path(@list) %>
+  <%= link_to "Edit PwnList", edit_list_path(@list), :class => "btn btn-primary" %>
   <% if @current_user.admin? %>
-  <%= link_to "Delete PwnList", list_path(@list), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+  <%= link_to "Delete PwnList", list_path(@list), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary" %>
   <% end %>
 </div>
