@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     end
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path # Redirect to home if the account is valid
+      redirect_to user_path(@user) # Redirect to home if the account is valid
     else
       render :new # Let them retry the form again
     end
