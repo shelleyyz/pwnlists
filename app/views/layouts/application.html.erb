@@ -20,9 +20,6 @@
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
     <% if @current_user.present? %>
-      <li class="nav-item active brand">
-        <%= link_to "PwnLists", root_path, :class => "nav-link" %>
-      </li>
       <li class="nav-item">
         <%= link_to "Profile", @current_user, :class => "nav-link" %>
       </li>
