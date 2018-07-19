@@ -1,10 +1,17 @@
 <h1><%= @user.first_name %>'s Profile</h1>
 
+<br>
+<br>
+
 <% if @user.image.present? %>
 <div class="circle-img">
   <%= image_tag @user.image, :alt => @user.first_name %>
 </div>
 <% end %>
+
+<br>
+<br>
+<br>
 
 <div>
   <%= link_to 'Edit Profile', edit_user_path(@user), :class => "btn btn-primary" %>
@@ -13,12 +20,15 @@
   <% end %>
 </div>
 
+<br>
+<br>
 
-  <p>Name: <%= @user.first_name %> <%= @user.last_name%></p>
+
+  <h3>Name: <%= @user.first_name %> <%= @user.last_name%></h3>
   <% if @user.bio.present? %>
-  <p>Bio: <%= @user.bio %></p>
+  <h4>Bio: <%= @user.bio %></h4>
   <% end %>
-  <p>Where I Live: <%= @user.country %></p>
+  <h4>Where I Live: <%= @user.country %></h4>
 
 <% if @user.country.present? %>
   <div id="map"></div> <!--need predefined height to display content, otherwise it won't expand-->
@@ -46,4 +56,8 @@
 <br>
 
   <button id="get-quote">Get your Swanson on</button>
+
+  <br>
+  <br>
+
   <p id="quote">Getting quote...</p>
