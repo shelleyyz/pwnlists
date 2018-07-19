@@ -1,15 +1,21 @@
 <h1><%= @list.name %></h1>
 
+<br>
+<br>
+
   <% if @name.first_name.present? %>
     <h2>Created By: <%= link_to @name.first_name, user_path(@list.user_id) %></h2>
   <% end %>
+
+<br>
+<br>
 
   <p>Description: <%= @list.description %></p>
 
 
   <% @list.games.each do |game| %>
 
-  <div class="container">
+  <div class="gamelist">
     <div class="row">
       <div class="col-sm-6">
         <%= link_to image_tag(game.image, :class => 'img-thumbnail'), game %>

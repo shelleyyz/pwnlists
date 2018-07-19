@@ -2,13 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+
+.gamebody {
+  text-align: center;
+}
+
+.gamelist {
+  margin-bottom: 50px;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+}
 
 .container {
   margin-bottom: 200px;
-}
-
-nav {
-  padding-bottom: 10px !important;
 }
 
 #map {
@@ -26,5 +36,5 @@ nav {
 
 h1 {
   text-align: center;
-  padding-top: 80px;
+  background-color: rgb(242, 239, 252);
 }
