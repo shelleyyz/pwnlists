@@ -1,6 +1,7 @@
 ## PROJECT #1 PWNLISTS
 
 [Link to live site](https://pwnlist.herokuapp.com/)
+Login details - shelley@ga.co password: chicken
 
 ## Pwnlists
 A game collection web application where users can sign up for an account and create their own video game lists. Pwnlists encourages users to be creative with their lists and really tests gamers on how much they know about the games they know and love. There's plenty of game collection list creators out there but I wanted to create one based on the Steam Awards poll that's held every year.
