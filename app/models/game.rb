@@ -14,4 +14,7 @@
 
 class Game < ApplicationRecord
   has_and_belongs_to_many :lists, :optional => true
+  def link_to_game
+    "<a target='_blank' href='/games/#{ id }'>#{ title }</a>".html_safe
+  end
 end

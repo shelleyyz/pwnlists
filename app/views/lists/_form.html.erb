@@ -31,7 +31,7 @@
 </div>
 
 <div class="form-check">
-  <%= f.collection_check_boxes :game_ids, Game.all, :id, :title do |b| %>
+  <%= f.collection_check_boxes :game_ids, Game.all, :id, :link_to_game do |b| %>
     <%= b.check_box %>
 <label class="form-check-label">
     <%= b.label %>

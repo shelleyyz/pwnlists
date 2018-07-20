@@ -1,22 +1,20 @@
-## PROJECT #1 DESCRIPTION
+## PROJECT #1 PWNLISTS
 
-It's time to put everything that you've learned in the past 5 weeks together! For
-project #1 you will use your knowledge of front and back-end web
-development to produce an awesome web application that can be used by friends,
-family or any of the other billions of people who use the Internet. The type of
-web application you create is your choice.
+Pwnlists - a game collection web application where users can sign up for an account and create their own video game lists. The website encourages users to be creative with their lists and really tests gamers on how much they know about the games they love.
 
-The objective of this project is to:
+## How to use
+* Sign up or log in via the homepage.
+* Once signed in, you can then create your gamer profile and update your your details example
 
-* To pull everything together by building a web application from the ground up.
-* To demonstrate mastery of topics covered during this course so far.
+- email
+- password
+- first name
+- last name
+- bio
+- country or location
+- avatar
 
-You will be working **individually** for this project. Show us what you've
-got!
-
-## CORE REQUIREMENTS
-Make sure to do all of the following with your app.
-
+* Users can then create gaming lists
 * **Models.** Your app should have at least 3 models. Make sure they are
 associated correctly!
 * **Views.** Use partials to DRY (Don’t Repeat Yourself) up your views.
