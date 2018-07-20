@@ -4,7 +4,7 @@
 <br>
 
 <% if @user.image.present? %>
-  <%= image_tag @user.image, :alt => @user.first_name %>
+  <%= image_tag @user.image, :class => "gamenav", :alt => @user.first_name %>
 <% end %>
 
 <br>
