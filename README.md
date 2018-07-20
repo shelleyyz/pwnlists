@@ -15,6 +15,8 @@ Pwnlists - a game collection web application where users can sign up for an acco
 - avatar
 
 * Users can then create gaming lists
+
+## Objectives
 * **Models.** Your app should have at least 3 models. Make sure they are
 associated correctly!
 * **Views.** Use partials to DRY (Don’t Repeat Yourself) up your views.
