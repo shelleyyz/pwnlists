@@ -14,14 +14,27 @@
 <br>
 
 <div class="controls">
-  <%= link_to 'Edit Profile', edit_user_path(@user), :class => "btn btn-primary" %>
-  <% if @current_user.admin? %>
-  <%= link_to 'Delete Profile', user_path(@user), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary" %>
-  <% end %>
+    <%= link_to 'Edit Profile', edit_user_path(@user), :class => "btn btn-primary" %>
+    <% if @current_user.admin? %>
+    <%= link_to 'Delete Profile', user_path(@user), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary" %>
+    <% end %>
 </div>
 
 <br>
 <br>
+
+
+<div class="controls">
+  <h3>Ron Swanson Quote Generator</h3>
+
+  <button id="get-quote" class="btn btn-primary">Get your Swanson on</button>
+
+  <br>
+  <br>
+
+  <p id="quote">Getting quote...</p>
+
+</div>
 
 </div>
 
@@ -58,15 +71,6 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRJ_rNpk79o-xD6SiesCvKhF6fEWrF6lk&callback=initMap"
     async defer></script>
-
-<br>
-
-  <button id="get-quote" class="btn btn-primary">Get your Swanson on</button>
-
-  <br>
-  <br>
-
-  <p id="quote">Getting quote...</p>
 
   </div>
 </div>
