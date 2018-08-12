@@ -4,6 +4,13 @@
 //
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
+.col {
+  height: 100%;
+  width: 40%;
+  vertical-align: top;
+  display: inline-block;
+  margin: 40px;
+}
 
 .gamebody {
   text-align: center;
@@ -44,8 +51,8 @@ h1 {
   background-color: rgb(242, 239, 252);
 }
 
-h3 h4 {
-  text-align: center;
+h4 {
+  
 }
 
 .controls {
