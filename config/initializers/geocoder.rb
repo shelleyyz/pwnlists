@@ -1,6 +1,6 @@
-Geocoder.configure(
-  lookup: :google,
-  api_key: "AIzaSyCRXwg_OQijgCBgFl1XoVh63khQf0Ojz7A",
-  timeout: 30,
-  use_https: true,
-)
+# Geocoder.configure(
+#   lookup: :google,
+#   api_key: "AIzaSyBRJ_rNpk79o-xD6SiesCvKhF6fEWrF6lk",
+#   timeout: 30,
+#   use_https: true,
+# )
